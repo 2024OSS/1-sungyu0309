@@ -15,9 +15,13 @@
       <div class="wrapper">
         <div id="menubar">
           <div id="menulist">
-            <a class="menuitem" href="style1.html">Stylesheet 1</a>
-            <a class="menuitem" href="style2.html">Stylesheet 2</a>
-            <a class="menuitem" href="nostyle.html">NoStylesheet 2</a>
+            <ul>
+              <li><a class="menuitem" href="style1.html">Stylesheet 1</a></li>
+              <li><a class="menuitem" href="style2.html">Stylesheet 2</a></li>
+              <li>
+                <a class="menuitem" href="nostyle.html">NoStylesheet 2</a>
+              </li>
+            </ul>
           </div>
         </div>
         <div id="main">
@@ -35,9 +39,7 @@
           <p>
             This page uses DIV elements to group different sections of the HTML
             page. Click here to see how the page looks like with no
-            stylesheet:<br /><a href="#" onclick="noStyles();return false"
-              >No Stylesheet</a
-            >.
+            stylesheet:<br /><a href="nostyle.html">No Stylesheet</a>.
           </p>
         </div>
         <div id="sidebar">
