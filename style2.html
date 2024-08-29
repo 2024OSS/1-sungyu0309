@@ -23,10 +23,9 @@
     }
 
     .wrapper {
-      border: 3px solid black;
       background-color: white;
       position: relative;
-      padding-right: 230px;
+      /* padding-right: 230px; */
     }
 
     #menubar {
@@ -37,8 +36,11 @@
     #menulist {
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
       width: 230px;
-      border: 2px solid blue;
+      height: 340px;
+      /* border: 2px solid blue; */
 
       > .menuitem {
         width: 155px;
@@ -46,12 +48,60 @@
         border: 1px solid #d14836;
         border-radius: 40px;
         color: #ffffff;
-        list-style-type: none;
+        /* list-style-type: none; */
+        text-decoration: none;
         margin: 10px;
         padding: 5px;
         text-align: center;
         cursor: pointer;
       }
+
+      > .select_menuitem {
+        font-weight: 600;
+        color: #d14836;
+        background-color: white;
+      }
+
+      > .hover_menuitem:hover {
+        color: #d14836;
+        background-color: white;
+      }
+    }
+
+    #main {
+      font: 80% Verdana;
+      padding-right: 230px;
+      padding: 20px 230px 20px 10px;
+
+      > h1,
+      h2 {
+        color: #d14836;
+      }
+
+      > p > .menuitem {
+        text-decoration: none;
+        color: #d14836;
+      }
+
+      > p > .menuitem:hover {
+        text-decoration: underline;
+      }
+    }
+
+    #sidebar {
+      background-color: #f6dad7;
+      padding: 20px 10px;
+      color: #d14836;
+      > p {
+        margin: 0;
+      }
+    }
+
+    #bottom {
+      text-align: center;
+      padding: 10px;
+      font-size: 70%;
+      color: white;
     }
   </style>
   <body>
@@ -63,9 +113,15 @@
       <div class="wrapper">
         <div id="menubar">
           <div id="menulist">
-            <a class="menuitem" href="style1.html">Stylesheet 1</a>
-            <a class="menuitem" href="style2.html">Stylesheet 2</a>
-            <a class="menuitem" href="nostyle.html">NoStylesheet 2</a>
+            <a class="menuitem hover_menuitem" href="style1.html"
+              >Stylesheet 1</a
+            >
+            <a class="menuitem select_menuitem" href="style2.html"
+              >Stylesheet 2</a
+            >
+            <a class="menuitem hover_menuitem" href="nostyle.html"
+              >NoStylesheet 2</a
+            >
           </div>
         </div>
         <div id="main">
@@ -83,7 +139,7 @@
           <p>
             This page uses DIV elements to group different sections of the HTML
             page. Click here to see how the page looks like with no
-            stylesheet:<br /><a href="#" onclick="noStyles();return false"
+            stylesheet:<br /><a href="nostyle.html" class="menuitem"
               >No Stylesheet</a
             >.
           </p>
