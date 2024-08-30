@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      #container {
+        max-width: 960px;
+        padding: 5px;
+        margin: auto;
+      }
+
+      #header {
+        width: 100%;
+        border: 3px solid black;
+      }
+
+      #navigation {
+        width: 100%;
+        border: 2px solid yellowgreen;
+        padding-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+
+        >div>span{
+          margin-left: 10px;
+        }
+      }
+
+      #title {
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #main_container {
+        width: 100%;
+        border: 3px solid red;
+      }
+
+      #content_list {
+        display: flex;
+        justify-content: space-evenly;
+
+        >.content{
+          text-align: center;
+        }
+      }
+
+      #content_plan {
+        text-align: center;
+        height: 340px;
+        border: 3px solid gray;
+      }
+
+      #footer {
+        width: 100%;
+        border: 3px solid blue;
+        min-height: 200px;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .footerInfo{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .list_container{
+        padding: 0;
+      }
+
+      .list{
+        list-style: none;
+      }
+
+      @media screen and (min-width: 700px) {
+        #navigation {
+          height: 40px;
+        }
+
+        #title {
+          height: 260px;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        #navigation {
+          height: 84px;
+        }
+
+        #title {
+          height: 256px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+      <div id="header">
+        <div id="navigation">
+          <div id="main_links">
+            <img src="#" alt="img"/>
+            <span>Pricing Example</span>
+          </div>
+          <div id="sub_links">
+            <span>Features</span>
+            <span>Enterprise</span>
+            <span>Support</span>
+            <span>Pricing</span>
+          </div>
+        </div>
+        <div id="title">
+          <h2>Pricing</h2>
+          <p>본문 블라블라</p>
+        </div>
+      </div>
+
+      <div id="main_container">
+        <div id="content_list">
+          <div class="content">
+            <p>title</p>
+            <p><span>$0</span><span>/mo</span></p>
+            <p>10 users included</br>
+              2 GB of storage</br>
+              Email support</br>
+              Help center access
+            </p>
+            <button>sign up for free</button>
+          </div>
+          <div class="content">
+            <p>title</p>
+            <p><span>$0</span><span>/mo</span></p>
+            <p>10 users included</br>
+              2 GB of storage</br>
+              Email support</br>
+              Help center access</p>
+            <button>sign up for free</button></div>
+          <div class="content">
+            <p>title</p>
+            <p><span>$0</span><span>/mo</span></p>
+            <p>10 users included</br>
+            2 GB of storage</br>
+            Email support</br>
+            Help center access</p>
+            <button>sign up for free</button>
+          </div>
+        </div>
+        
+        <div id="content_plan">
+          Compare plan
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Free</th>
+                <th style="width: 22%;">Pro</th>
+                <th style="width: 22%;">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Public</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Private</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Permissions</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Sharing</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Unlimited members</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Extra security</th>
+                <td></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="footer">
+        <div class="footerInfo">2017-2024</div>
+        <div class="footerInfo">
+          <h5>Features</h5>
+          <ul class="list_container">
+            <li class="list">Cool stuff</li>
+            <li class="list">Random feature</li>
+            <li class="list">Team feature</li>
+            <li class="list">Stuff for developers</li>
+            <li class="list">Another one</li>
+            <li class="list">Last time</li>
+          </ul>
+        </div>
+        <div class="footerInfo">
+          <h5>Resources</h5>
+          <ul class="list_container">
+            <li class="list">Resource</li>
+            <li class="list">Resource name</li>
+            <li class="list">Another resource</li>
+            <li class="list">Final resource</li>
+          </ul>
+        </div>
+        <div class="footerInfo">
+          <h5>Resources</h5>
+          <ul class="list_container">
+            <li class="list">Team</li>
+            <li class="list">Location</li>
+            <li class="list">Privacy</li>
+            <li class="list">Terms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,11 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #link_wrapper{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .link{
+        margin: 10px;
+      }
+    </style>
   </head>
   <body>
     <h1>22300794 한선규</h1>
     <p>오픈소스 스튜디오 첫 과제</p>
-    <a href="nostyle.html">과제 1 링크(html, css 연습)</a>
+    <div id="link_wrapper">
+      <a class="link" href="nostyle.html"">과제 1 링크(html, css 연습)</a>
+      <a class="link" href="example.html">bootstrap 페이지 따라하기 링크</a>
+    </div>
     <img src="./img/example.png" width="300px" />
     <a href="https://hisnet.handong.edu/for_student/main.php" style="color: red"
       >히즈넷링크</a
