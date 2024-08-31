@@ -8,6 +8,8 @@
       body {
         margin: 0;
         height: 100%;
+        background-color: rgb(33, 37, 41);
+        color: white;
       }
 
       #container {
@@ -24,12 +26,18 @@
       #navigation {
         width: 100%;
         border: 2px solid yellowgreen;
-        padding-bottom: 16px;
+
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         >div>span{
           margin-left: 10px;
+          cursor: pointer;
+        }
+
+        >div>span:hover{
+          color: rgb(208, 206, 206);
         }
       }
 
@@ -38,6 +46,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
       }
 
       #main_container {
@@ -47,10 +56,24 @@
 
       #content_list {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+      }
 
-        >.content{
-          text-align: center;
+      .content{
+        text-align: center;
+        border: 1px solid gray;
+        border-radius: 8px;
+
+        > .content_title{
+          border: 1px solid gray;
+          padding: 16px;
+          vertical-align: middle;
+          margin: 0;
+        }
+
+        >.content_btn{
+          width: 220px;
+          height: 30px;
         }
       }
 
@@ -83,7 +106,7 @@
 
       @media screen and (min-width: 700px) {
         #navigation {
-          height: 40px;
+          height: 80px;
         }
 
         #title {
@@ -93,7 +116,7 @@
 
       @media screen and (max-width: 700px) {
         #navigation {
-          height: 84px;
+          height: 124px;
         }
 
         #title {
@@ -108,8 +131,9 @@
       <div id="header">
         <div id="navigation">
           <div id="main_links">
-            <img src="#" alt="img"/>
-            <span>Pricing Example</span>
+            <!-- <img src="#" alt="img"/> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94" role="img"></svg>
+            <span>Pricing example</span>
           </div>
           <div id="sub_links">
             <span>Features</span>
@@ -120,38 +144,38 @@
         </div>
         <div id="title">
           <h2>Pricing</h2>
-          <p>본문 블라블라</p>
+          <p style="width: 70%;">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
         </div>
       </div>
 
       <div id="main_container">
         <div id="content_list">
           <div class="content">
-            <p>title</p>
-            <p><span>$0</span><span>/mo</span></p>
-            <p>10 users included</br>
-              2 GB of storage</br>
-              Email support</br>
-              Help center access
-            </p>
-            <button>sign up for free</button>
-          </div>
-          <div class="content">
-            <p>title</p>
-            <p><span>$0</span><span>/mo</span></p>
-            <p>10 users included</br>
+            <p class="content_title">title</p>
+            <p class="content_price"><span>$0</span><span>/mo</span></p>
+            <p class="content_explanation">10 users included</br>
               2 GB of storage</br>
               Email support</br>
               Help center access</p>
-            <button>sign up for free</button></div>
+            <button class="content_btn">sign up for free</button>
+          </div>
           <div class="content">
-            <p>title</p>
-            <p><span>$0</span><span>/mo</span></p>
-            <p>10 users included</br>
-            2 GB of storage</br>
-            Email support</br>
-            Help center access</p>
-            <button>sign up for free</button>
+            <p class="content_title">title</p>
+            <p class="content_price"><span>$0</span><span>/mo</span></p>
+            <p class="content_explanation">10 users included</br>
+              2 GB of storage</br>
+              Email support</br>
+              Help center access</p>
+            <button class="content_btn">sign up for free</button>
+          </div>
+          <div class="content">
+            <p class="content_title">title</p>
+            <p class="content_price"><span>$0</span><span>/mo</span></p>
+            <p class="content_explanation">10 users included</br>
+              2 GB of storage</br>
+              Email support</br>
+              Help center access</p>
+            <button class="content_btn">sign up for free</button>
           </div>
         </div>
         
